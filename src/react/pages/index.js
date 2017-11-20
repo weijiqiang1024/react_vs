@@ -10,7 +10,7 @@ import * as act from '../../redux/actions/login';
 import { MainMenu } from '../../utils/menu';
 import { SideRoute, ContentRoute } from '../routes'
 import styles from './index'
-const { Header, Sider } = Layout;
+const { Header, Sider ,Content} = Layout;
 
 message.config({
     top: 50,
@@ -83,18 +83,19 @@ export class mainPage extends React.Component {
                         </div>
                     </div>
                 </Header>
-                <div style={{ width: '100%', display: 'flex', height: '100%', backgroundColor: '#404040' }} >
+                <Layout>
                     {
-                        this.props.location.pathname !== '/main/monitor' ? <Sider
-                            collapsible
-                            collapsed={this.state.collapsed}
-                            onCollapse={this.onCollapse}
-                        ><SideRoute /> </Sider> : null
+                        this.props.location.pathname !== '/main/monitor' ?
+                            <Sider
+                                collapsible
+                                collapsed={this.state.collapsed}
+                                onCollapse={this.onCollapse}
+                            ><SideRoute /> </Sider>
+                            : null
                     }
-                    <div style={{ width: '100%', height: '100%' }}>
-                        <ContentRoute />
-                    </div>
-                </div>
+                    <Content><ContentRoute/></Content>
+                    
+                </Layout>
             </Layout>
         );
     }

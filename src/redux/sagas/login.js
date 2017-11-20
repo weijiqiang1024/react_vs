@@ -17,7 +17,7 @@ function* loginSubmit(action) {
             reqParam: action.payload
         };
         const response = yield call(dataService.postRequest, param);
-
+        debugger;
         //处理返回结果
         if (response) {
             if (response.data.ret === 0)

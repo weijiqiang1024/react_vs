@@ -10,7 +10,8 @@ export const dataService = {
     postRequest: (params) => {
         return new Promise(function (resolve, reject) {
             console.log(params);
-            axios.post(params.reqUrl + '?access_token=' + access_token + '&username=' + username, params.reqParam, config)
+            // axios.post(params.reqUrl + '?access_token=' + access_token + '&username=' + username, params.reqParam, config)
+            axios.post(params.reqUrl, params.reqParam, config)
                 .then(function (res) {
                     resolve(res);
                 })
@@ -32,7 +33,7 @@ export const dataService = {
     },
 
     reqUrl: {
-        login: '/api/sys_users/webLogin',
+        login: 'login',
         singleQuery: '/api/sys_users/webLogin',
         sysDic: '/api/sys_dics/listJson',
         area: '/api/b_areas/list',
