@@ -34,6 +34,7 @@ export const dataService = {
 
     reqUrl: {
         login: 'login',
+        userlist:'/user/list',
         singleQuery: '/api/sys_users/webLogin',
         sysDic: '/api/sys_dics/listJson',
         area: '/api/b_areas/list',
