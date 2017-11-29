@@ -28,7 +28,7 @@ class Login extends React.Component {
                  
                 <footer style={{ display:'flex',flexDirection:'column',justifyContent:'flex-end',  alignItems:'center', flex: 1, backgroundColor: '#fff' }}>
                     <div style={{color:'#49a9ee'}}>
-                        支持谷歌浏览器 版权所有 @安徽蓝盾光电子股份有限公司
+                        支持谷歌浏览器 版权所有 @2B青年股份有限公司
                     </div>
                 </footer>
 

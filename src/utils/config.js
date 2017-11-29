@@ -3,7 +3,7 @@
  */
 
 export let config = {
-    baseURL: 'http://192.168.10.150:3000',
+    baseURL: 'http://192.168.0.103:3000',
     //测试url
     //baseURL: 'http://192.168.10.190:3001',
     // transformRequest: [function (data) {
@@ -11,7 +11,7 @@ export let config = {
     //     data = Qs.stringify({});
     //     return data;
     // }],
-    transformRequest: [function (data) {
+    transformRequest: [function(data) {
         // Do whatever you want to transform the data
         let ret = '';
         for (let it in data) {
@@ -21,7 +21,7 @@ export let config = {
     }],
 
 
-    transformResponse: [function (data) {
+    transformResponse: [function(data) {
         // 这里提前处理返回的数据
         return data;
     }],
@@ -46,8 +46,8 @@ export let config = {
     responseType: 'json',
     imgServer: '192.168.10.192',
 
-    minHeight:0,
-    maxHeight:10005,
-    heightStep:15,// 高度步进
-    heightIntervalLength:20, //高度间隔下拉框长度
+    minHeight: 0,
+    maxHeight: 10005,
+    heightStep: 15, // 高度步进
+    heightIntervalLength: 20, //高度间隔下拉框长度
 };

@@ -5,7 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Icon, Layout, message } from 'antd';
 
-import logo from '../../public/images/gh.png';
+import logo from '../../public/images/theme_logo.svg';
 import * as act from '../../redux/actions/login';
 import { MainMenu } from '../../utils/menu';
 import { SideRoute, ContentRoute } from '../routes'
@@ -71,7 +71,7 @@ export class mainPage extends React.Component {
                     <div style={{ display: 'flex', alignItems: 'center', float: 'left' }}>
                         <img style={{ margin: '10px 10px 0 10px' }} src={logo} />
                         <span style={{ whiteSpace: 'nowrap', height: '60px', color: '#FFF', fontSize: '26px', fontWeight: 'bold', marginRight: '30px' }}
-                        > 蓝 盾 O3 立 体 监 测 分 析 平 台</span>
+                        > 灵 感 创 意 无 限 平 台</span>
 
                         <span style={{ whiteSpace: 'nowrap', height: '60px', color: 'white', fontSize: '10px' }}>
                             {'欢迎您：' + this.state.userName}</span>
