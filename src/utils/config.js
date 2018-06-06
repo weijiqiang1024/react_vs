@@ -3,7 +3,7 @@
  */
 
 export let config = {
-    baseURL: 'http://192.168.0.103:3000',
+    baseURL: 'http://192.168.0.100:7001',
     //测试url
     //baseURL: 'http://192.168.10.190:3001',
     // transformRequest: [function (data) {
