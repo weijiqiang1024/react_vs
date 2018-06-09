@@ -6,5 +6,7 @@
 
     "emmet.syntaxProfiles": { "javascript": "jsx" },
 
-    "emmet.triggerExpansionOnTab": true
+    "emmet.triggerExpansionOnTab": true,
+    "editor.fontFamily": "Monaco",
+
 }

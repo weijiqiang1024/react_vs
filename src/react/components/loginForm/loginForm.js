@@ -61,7 +61,7 @@ class LoginF extends React.Component {
     };
 
     render() {
-        const {getFieldDecorator} = this.props.form;
+        const { getFieldDecorator } = this.props.form;
 
         return (
 
@@ -71,10 +71,10 @@ class LoginF extends React.Component {
                     <span className={styles.hTitle}>
                         灵 感 创 意 无 限 平 台
                     </span>
-                </div >
+                </div>
 
                 <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
-                    <FormItem >
+                    <FormItem>
                         {getFieldDecorator('userName', {
                             rules: [
                                 {
@@ -83,9 +83,9 @@ class LoginF extends React.Component {
                                 }
                             ]
                         })(
-                            <Input prefix={< Icon type="user" style={{ fontSize: 13 }} />} placeholder="用户名" />)}
+                            <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="用户名" />)}
                     </FormItem>
-                    <FormItem >
+                    <FormItem>
                         {getFieldDecorator('password', {
                             rules: [
                                 {
@@ -94,17 +94,17 @@ class LoginF extends React.Component {
                                 }
                             ]
                         })(
-                            <Input prefix={< Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="密码" />)}
+                            <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="密码" />)}
                     </FormItem>
-                    <FormItem >
+                    <FormItem>
                         {getFieldDecorator('remember', {
                             valuePropName: 'checked',
                             initialValue: true
                         })(
-                            <Checkbox >
+                            <Checkbox>
                                 记住密码
                             </Checkbox>
-                            )
+                        )
                         }
                         <Button type="primary" htmlType="submit" className={styles.loginFormButton} loading={this.state.loading}>
                             登陆
@@ -112,11 +112,11 @@ class LoginF extends React.Component {
                         <div style={{ display: this.state.loginFlag > 0 ? 'block' : 'none' }}>
                             <Tooltip title="登录失败">
                                 <span style={{ color: "red" }}>用户名密码不匹配. </span>
-                            </Tooltip >
+                            </Tooltip>
                         </div>
-                    </FormItem >
+                    </FormItem>
                 </Form>
-            </div >
+            </div>
 
         );
     }
