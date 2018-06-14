@@ -33,7 +33,7 @@ export const dataService = {
     },
 
     reqUrl: {
-        login: 'login',
+        login: '/api/login',
         userlist:'/user/list',
         singleQuery: '/api/sys_users/webLogin',
         sysDic: '/api/sys_dics/listJson',
@@ -54,7 +54,7 @@ export const dataService = {
         delMS: '/api/b_sites/delete',
 
         queryUser: '/api/sys_users/list',
-        addUser: '/api/sys_users/add',
+        addUser: '/api/sys_user/create',
         editUser: '/api/sys_users/userUpdate',
         delUser: '/api/sys_users/delete',
 
