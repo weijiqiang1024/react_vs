@@ -35,7 +35,7 @@ export let config = {
 		'Authorization': sessionStorage.getItem('access_token')
 	},
 
-	token: sessionStorage.getItem('access_token'),
+	// token: sessionStorage.getItem('access_token'),
 
 	username: '',
 
