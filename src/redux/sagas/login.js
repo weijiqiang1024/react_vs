@@ -20,12 +20,12 @@ function* loginSubmit(action) {
         debugger;
         //处理返回结果
         if (response) {
-            if (response.data.ret === 0)
+            if (response.data.code !== 0)
                 yield put(act.loginFail());
             else {
-                localStorage.setItem('access_token',response.data.token || '');
-                localStorage.setItem('username',response.data.userData[0].username || '');
-                yield put(act.loginSuccess(response.data.userData[0]));
+                sessionStorage.setItem('access_token',response.data.data.token || '');
+                sessionStorage.setItem('username',response.data.data.userData[0].username || '');
+                yield put(act.loginSuccess(response.data.data.userData[0]));
             }
         }
     } catch (error) {
