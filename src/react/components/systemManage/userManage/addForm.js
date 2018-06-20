@@ -241,7 +241,6 @@ class AddDataFormM extends React.Component {
                     }
                 }
                 _self.props.addOpt(values);
-                _self.props.changeModalState();
             }
         });
     }

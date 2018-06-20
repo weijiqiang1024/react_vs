@@ -56,7 +56,7 @@ export const dataService = {
         queryUser: '/api/sys_user/find',
         addUser: '/api/sys_user/create',
         editUser: '/api/sys_user/update',
-        delUser: '/api/sys_users/delete',
+        delUser: '/api/sys_user/delete',
 
         queryAlarm: '/api/b_alarms/list',
         addAlarm: '/api/b_alarms/add',

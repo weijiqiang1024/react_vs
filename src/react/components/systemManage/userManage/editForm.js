@@ -268,7 +268,6 @@ class EidtDataFormM extends React.Component {
                 }
                 values = Object.assign({}, _self.state.editRecord, values);
                 this.props.editOpt(values);
-                this.props.changeModalState();
             }
         });
 

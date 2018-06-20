@@ -14,7 +14,9 @@ class Tables extends React.Component {
             tableConfig: [],
             addModalVisible: false,
             editModalVisible: false,
-            evFlag: false //edit or view opt flag
+            evFlag: false, //edit or view opt flag
+            pageIndex:1,
+            pageSize:10
         }
     }
 
@@ -24,11 +26,14 @@ class Tables extends React.Component {
             if (!nextProps.SysUser.isAdding && this.props.SysUser.isAdding) {
                 message.success('添加成功！');
                 this.changeModalState();
+                this.queryData();
             } else if (!nextProps.SysUser.isEditing && this.props.SysUser.isEditing) {
                 message.success('修改成功！');
                 this.changeModalState();
+                this.queryData();
             } else if (!nextProps.SysUser.isDeling && this.props.SysUser.isDeling) {
                 message.success('删除成功！');
+                this.queryData();
             } else if (!nextProps.SysUser.isLoading && this.props.SysUser.isLoading) {
                 message.success('查询成功！');
             }
@@ -63,7 +68,7 @@ class Tables extends React.Component {
                 <span>
                     <a title="编辑" onClick={(e) => _self.editData(record, e)}><Icon type="edit" /></a>
                     <span className="ant-divider" />
-                    <Popconfirm title="确定删除 ?" onConfirm={(e) => _self.deleteData(record.id, e)}>
+                    <Popconfirm title="确定删除 ?" onConfirm={(e) => _self.deleteData(record._id, e)}>
                         <a title="删除"><Icon type="delete" /></a>
                     </Popconfirm>
                     <span className="ant-divider" />
@@ -75,6 +80,18 @@ class Tables extends React.Component {
             tableConfig: tableConfig,
             // data: data
         });
+    }
+
+    //查询方法
+    queryData = ()=>{
+        let values = this.props.searchForm.getFieldsValue();
+        let queryData = {
+            flag: values.flag,
+            username: values.username,
+            pageIndex: this.state.pageIndex,
+            pageSize: this.state.pageSize
+        }
+        this.props.queryOpt(queryData);
     }
 
     //勾选行变化
@@ -156,7 +173,6 @@ class Tables extends React.Component {
     render() {
 
         let columns = this.state.tableConfig;
-        debugger;
         let data = this.props.SysUser ? this.props.SysUser.data : [];
 
         let pagination = {

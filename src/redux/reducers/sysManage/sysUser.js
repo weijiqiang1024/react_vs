@@ -58,7 +58,11 @@ export default function SysUser(state = initState, action) {
                 isAdding: true
             }
         case suAc.ADD_SUCCESS:
-            return addOpt(state, action);
+            // return addOpt(state, action);
+            return {
+                ...state,
+                isAdding: false
+            }
         case suAc.ADD_FAIL:
             return {
                 ...state,
@@ -72,7 +76,11 @@ export default function SysUser(state = initState, action) {
                 isEditing: true
             }
         case suAc.EDIT_SUCCESS:
-            return editOpt(state,action);
+            // return editOpt(state,action);
+            return {
+                ...state,
+                isEditing: false
+            }
         case suAc.EDIT_FAIL:
             return {
                 ...state,
@@ -86,7 +94,11 @@ export default function SysUser(state = initState, action) {
                 isDeling: true
             }
         case suAc.DELETE_SUCCESS:
-            return deleteOpt(state,action);
+            // return deleteOpt(state,action);
+            return {
+                ...state,
+                isDeling: false
+            }
         case suAc.DELETE_FAIL:
             return {
                 ...state,
