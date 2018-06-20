@@ -156,10 +156,11 @@ class Tables extends React.Component {
     render() {
 
         let columns = this.state.tableConfig;
-        let list = this.props.SysUser ? this.props.SysUser.list : [];
+        debugger;
+        let data = this.props.SysUser ? this.props.SysUser.data : [];
 
         let pagination = {
-            total: list.count,
+            total: data.count,
             showSizeChanger: true,
             showTotal: (count) => `共 ${count} 条`,
         };
@@ -179,7 +180,7 @@ class Tables extends React.Component {
                     {...this.props}
                     rowKey={record => record.id}
                     columns={columns}
-                    dataSource={list.datas}
+                    dataSource={data.list}
                     pagination={pagination}
                     onChange={this.handleTableChange}
                     rowSelection={rowSelection}

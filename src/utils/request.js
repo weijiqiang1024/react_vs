@@ -53,9 +53,9 @@ export const dataService = {
         editMS: '/api/b_sites/siteUpdate',
         delMS: '/api/b_sites/delete',
 
-        queryUser: '/api/sys_users/list',
+        queryUser: '/api/sys_user/find',
         addUser: '/api/sys_user/create',
-        editUser: '/api/sys_users/userUpdate',
+        editUser: '/api/sys_user/update',
         delUser: '/api/sys_users/delete',
 
         queryAlarm: '/api/b_alarms/list',

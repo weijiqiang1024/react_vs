@@ -18,10 +18,10 @@ function* queryData(action) {
         const response = yield call(dataService.postRequest, param);
 
         if (response) {
-            if (response.data.ret === 0) {
+            if (response.data.code !== 0) {
                 yield put(actMsg.optFail(response.data.msg));
             } else {
-                yield put(act.querySuccess(response.data));
+                yield put(act.querySuccess(response.data.data));
             }
         }
 

@@ -11,11 +11,9 @@ import { addOpt, editOpt, deleteOpt } from '../share';
 
 const initState = {
     //数据列表
-    list: {
+    data: {
         count: 0,
-        datas: [],
-        msg: '',
-        ret: 0
+        list: [],
     },
     //添加临时数据    
     addMS: {},
@@ -44,7 +42,7 @@ export default function SysUser(state = initState, action) {
         case suAc.QUERY_SUCCESS:
             return {
                 ...state,
-                list: action.payload,
+                data: action.payload,
                 isLoading: false
             }
         case suAc.QUERY_FAIL:
